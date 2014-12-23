@@ -11,6 +11,7 @@ env:
     - APP_NAME=rocky-wave-3011
     - MONGOLAB_URI=mongodb://localhost/test
     - secure: MRuHkLbL9HPkJPU5lzkKM1+NOq1S5RrhxEyhJkk60xxYiF7DMzydiBN8oFBjWrSmyGeGRuEC22a0I5ItobdWVszfcJCaXHwtfKzfGOUdKuyCnDgvojXhv/jrBvULyLK6zsLw3b8NMxdnwNsHqSPm19qW/EIGEl9Zv/637Igos69z9aT7+xrEG013+6HtKYb8RHm+iPSNsFoBi/RSAHYuM1eLTZWG2WAkjgzZaYmrHCgNwVmk+HOGR+TOWN7Iu5lrjyvC1XDCQrOvo1hZI30cd9OqJ5aadFm3exQpNhI4I7AgOnCbK3NoWNc/GAnqKXCvsaIQ80Jd/uLIOVyMjD6Xmg==
+    - secure: FsSXnuFFCuauOqNPjctcF4SlbZoCPImF2kBCSQ7C3i0d0VvXlHD9J8v7xMpAH66kLlkrJVl3NlAJR6BlZDXB0PJPQbCY3f6Cz1NZISftYrwSqISNVcrlSSPFfR9H6gUfW3TjFZQjQyUSpNYB09PWCpEGkjFdZXigypvqMnUXjyS0BHj4Ee0xsndO6uGYpwOoCt7Omc1RoEZlSZiyBwFJ1JphHY8zOlMfkuk3c79S3UZGe5pg6UD2fiIyGb4heQsCJe505Or0DDOzZPjFZe5+wT76mrM/V3lRCGa7bgUIgOHH5f4xq4ujLO331I/GRTSlE3BG7E5VHsfS94yTy/xaEw==
 
 before_install:
   - which heroku || wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
@@ -25,5 +26,5 @@ script:
 
 after_success:
   - test -f ~/.ssh/id_rsa.heroku || ssh-keygen -y -f ~/.ssh/id_rsa > ~/.ssh/id_rsa.heroku && heroku keys:add ~/.ssh/id_rsa.heroku
-  - git remote -v | grep ^heroku || heroku git:remote --ssh-git --app $APP_NAME
+  - git remote -v | grep ^heroku || heroku git:remote --ssh-git --app php-repo-beta
   - git push -f heroku $BRANCH:master
