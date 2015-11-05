@@ -8,8 +8,9 @@ services:
 
 env:
   global:
-    - APP_NAME=rocky-wave-3011
+    - APP_NAME=php-mongo-heroku
     - MONGOLAB_URI=mongodb://localhost/test
+    - secure: iFAUqKDcojaw0L0PdA7BnFlYUs6rcSZNeZR+xTLIpm76KxTq+kYjpxV5RCmfUy3I1ryE4Pf7Col+oKCdV8lXSqEx0/wzhGxRwG/uB5dEYka+XUjSz3ddoeUiPMMDEfa2RlZpwg0yxRP27BssYkR/5nh07PEDguhpV9ZoLJMbpIBdKvDAzbe6wZVmAXoovA++QKv21Q0C4btEs4IgklFlFJnSXZJtUifnBLUowry8Tlys8rgTe4M8uAt2B0VA7Zpk5y1eJett6Bijl5vwSiXL+vLyZ5iPMu4UbAzzQn42LfSisjA+jBcWiR88Ua/z1Rr2ro6ne8QXUqq2uzA23jol1A==
     - secure: MRuHkLbL9HPkJPU5lzkKM1+NOq1S5RrhxEyhJkk60xxYiF7DMzydiBN8oFBjWrSmyGeGRuEC22a0I5ItobdWVszfcJCaXHwtfKzfGOUdKuyCnDgvojXhv/jrBvULyLK6zsLw3b8NMxdnwNsHqSPm19qW/EIGEl9Zv/637Igos69z9aT7+xrEG013+6HtKYb8RHm+iPSNsFoBi/RSAHYuM1eLTZWG2WAkjgzZaYmrHCgNwVmk+HOGR+TOWN7Iu5lrjyvC1XDCQrOvo1hZI30cd9OqJ5aadFm3exQpNhI4I7AgOnCbK3NoWNc/GAnqKXCvsaIQ80Jd/uLIOVyMjD6Xmg==
 
 before_install:
