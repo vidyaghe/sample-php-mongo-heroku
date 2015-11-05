@@ -15,6 +15,7 @@ env:
 
 before_install:
   - source ~/.rvm/scripts/rvm && rvm use 2.0.0
+  - composer update
   - which heroku || wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 
 before_script: 
